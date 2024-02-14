@@ -30,10 +30,10 @@ const Fratello = () => {
     <>
       <div className={`nav-container w-full bg-cover px-4 md:px-8 ${bg === 1 ? "bg-image1" : bg === 2 ? "bg-image2" : "bg-image3"}`}>
         <Navbar/>
-        <div className="hero-section md:max-w-screen-lg md:mx-auto h-[650px] flex flex-col justify-between pb-10">
+        <div className="hero-section md:max-w-screen-lg md:mx-auto h-[500px] md:h-[650px] flex flex-col justify-between pb-10">
             <div className="pt-40 text-white">
-              <h1 className="text-6xl mb-4">Fratello Studio</h1>
-              <p className="text-2xl">We build your dream in reality</p>
+              <h1 className="text-4xl md:text-6xl md:mb-4 font-bold">Fratello Studio</h1>
+              <p className="text-xl md:text-2xl">We build your dream in reality</p>
             </div>
             <ul className="flex items-center space-x-4">
               <li className={` text-3xl text-bold cursor-pointer hover:text-white ${bg === 1 ? "text-white" : "text-slate-600"}` } onClick={bg1}>01</li>
