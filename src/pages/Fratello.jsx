@@ -17,10 +17,14 @@ const Fratello = () => {
     setBG(3);
   };
 
+  const bg4 = () => {
+    setBG(4);
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
-      setBG((prevBG) => (prevBG === 3 ? 1 : prevBG + 1));
-    }, 10000);
+      setBG((prevBG) => (prevBG === 4 ? 1 : prevBG + 1));
+    }, 5000);
 
     // Clean up the interval when the component is unmounted
     return () => clearInterval(interval);
@@ -30,7 +34,13 @@ const Fratello = () => {
     <>
       <div
         className={`nav-container w-full bg-cover px-4 md:px-8 ${
-          bg === 1 ? "bg-image1" : bg === 2 ? "bg-image2" : "bg-image3"
+          bg === 1
+            ? "bg-image1"
+            : bg === 2
+            ? "bg-image2"
+            : bg === 3
+            ? "bg-image3"
+            : "bg-image4"
         }`}
       >
         <Navbar />
@@ -48,7 +58,7 @@ const Fratello = () => {
           </div>
           <ul className="flex items-center space-x-4">
             <li
-              className={` text-3xl text-bold cursor-pointer hover:text-white ${
+              className={` text-xl text-bold cursor-pointer hover:text-white ${
                 bg === 1 ? "text-white" : "text-slate-600"
               }`}
               onClick={bg1}
@@ -57,7 +67,7 @@ const Fratello = () => {
             </li>
             <li className="text-slate-600 text-3xl text-bold">-</li>
             <li
-              className={` text-3xl text-bold cursor-pointer hover:text-white ${
+              className={` text-xl text-bold cursor-pointer hover:text-white ${
                 bg === 2 ? "text-white" : "text-slate-600"
               }`}
               onClick={bg2}
@@ -66,12 +76,21 @@ const Fratello = () => {
             </li>
             <li className="text-slate-600 text-3xl text-bold">-</li>
             <li
-              className={` text-3xl text-bold cursor-pointer hover:text-white ${
+              className={` text-xl text-bold cursor-pointer hover:text-white ${
                 bg === 3 ? "text-white" : "text-slate-600"
               }`}
               onClick={bg3}
             >
               03
+            </li>
+            <li className="text-slate-600 text-3xl text-bold">-</li>
+            <li
+              className={` text-xl text-bold cursor-pointer hover:text-white ${
+                bg === 4 ? "text-white" : "text-slate-600"
+              }`}
+              onClick={bg4}
+            >
+              04
             </li>
           </ul>
         </div>
