@@ -9,6 +9,7 @@ export default {
         image3: "url('./hero-bg3.jpg')",
         image4: "url('./hero-bg4.jpg')",
         image5: "url('./interior-design.jpg')",
+        contacts: "url('./contacts-hero.avif')",
       },
     },
     plugins: [],

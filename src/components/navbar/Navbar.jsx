@@ -17,8 +17,8 @@ const Navbar = () => {
         <div className="logo">
           <Link to="/">
             <img
-              src="./fs-logo.jpg"
-              className="h-[64px] w-[64px] rounded-full"
+              src="./fs-logo.png"
+              className="h-[128px] w-[128px] "
               alt="Fratello Studios Logo"
             />
           </Link>

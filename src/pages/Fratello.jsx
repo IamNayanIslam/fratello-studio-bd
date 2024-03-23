@@ -370,7 +370,7 @@ const Fratello = () => {
           </div>
         </div>
       </div>
-      <div className="w-full bg-image4">
+      <div className="w-full bg-image5y">
         <div className="w-full bg-[#00000098]">
           <div className="md:max-w-screen-2xl mx-auto px-4 my-[100px] min-h-[400px] flex flex-col items-center justify-center gap-5">
             <h1 className="text-4xl text-white font-bold text-center">
