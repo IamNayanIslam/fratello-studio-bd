@@ -6,42 +6,40 @@ import Contacts from "../pages/Contacts";
 import About from "../pages/About";
 // import Career from "../pages/Team";
 import Team from "../pages/Team";
-import Career from "../pages/Career";
-
 
 export const Routes = createBrowserRouter([
-    {
-      path: "/",
-      element: <App />,
+  {
+    path: "/",
+    element: <App />,
     //   errorElement: <Error />,
-      
-      children: [
-        {
-          path: "/",
-          element: <Fratello />,
-        },
-        {
-          path: "/projects",
-          element: <Projects />,
-        },
-        {
-          path: "/contacts",
-          element: <Contacts />,
-        },
-        
-        {
-          path: "/about",
-          element: <About />,
-        },
-        {
-          path: "/team",
-          element: <Team />,
-        },
-        {
-          path: "/career",
-          element: <Career />,
-        },
-     /*    {
+
+    children: [
+      {
+        path: "/",
+        element: <Fratello />,
+      },
+      {
+        path: "/projects",
+        element: <Projects />,
+      },
+      {
+        path: "/contacts",
+        element: <Contacts />,
+      },
+
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/team",
+        element: <Team />,
+      },
+      {
+        path: "/",
+        element: <Fratello />,
+      },
+      /*    {
           path: "/applied",
           element: <Applied />,
         },
@@ -64,5 +62,6 @@ export const Routes = createBrowserRouter([
       path: "*",
       element: <Error />,
     }, */
-]}
-  ]);
+    ],
+  },
+]);

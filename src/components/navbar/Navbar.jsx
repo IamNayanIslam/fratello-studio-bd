@@ -24,20 +24,20 @@ const Navbar = () => {
           </Link>
         </div>
         <ul className="hidden md:flex justify-between space-x-8">
-          <li className="text-bold text-white text-xl">
+          <li className="hover:font-bold duration-300 text-white text-xl">
+            <Link to="/">Home</Link>
+          </li>
+          <li className="hover:font-bold duration-300 text-white text-xl">
             <Link to="/projects">Projects</Link>
           </li>
-          <li className="text-bold text-white text-xl">
+          <li className="hover:font-bold duration-300 text-white text-xl">
             <Link to="/team">Team</Link>
           </li>
-          <li className="text-bold text-white text-xl">
-            <Link to="contacts">Contacts</Link>
+          <li className="hover:font-bold duration-300 text-white text-xl">
+            <Link to="/contacts">Contacts</Link>
           </li>
-          <li className="text-bold text-white text-xl">
+          <li className="hover:font-bold duration-300 text-white text-xl">
             <Link to="/about">About</Link>
-          </li>
-          <li className="text-bold text-white text-xl">
-            <Link to="career">Career</Link>
           </li>
         </ul>
 
@@ -71,6 +71,9 @@ const Navbar = () => {
           </div>
           <ul className="flex flex-col justify-between space-y-4 mt-10">
             <li className="text-bold text-white text-xl border-b border-gray-600 py-2 px-4 hover:bg-gray-600">
+              <Link to="/">Home</Link>
+            </li>
+            <li className="text-bold text-white text-xl border-b border-gray-600 py-2 px-4 hover:bg-gray-600">
               <Link to="/projects">Projects</Link>
             </li>
             <li className="text-bold text-white text-xl border-b border-gray-600 py-2 px-4 hover:bg-gray-600">
@@ -79,11 +82,11 @@ const Navbar = () => {
             <li className="text-bold text-white text-xl border-b border-gray-600 py-2 px-4 hover:bg-gray-600">
               <Link to="contacts">Contacts</Link>
             </li>
-            <li className="text-bold text-white text-xl border-b border-gray-600 py-2 px-4 hover:bg-gray-600">
+            {/* <li className="text-bold text-white text-xl border-b border-gray-600 py-2 px-4 hover:bg-gray-600">
               <Link to="/about">About</Link>
-            </li>
+            </li> */}
             <li className="text-bold text-white text-xl py-2 px-4 hover:bg-gray-600">
-              <Link to="career">Career</Link>
+              <Link to="/about">About</Link>
             </li>
           </ul>
         </div>

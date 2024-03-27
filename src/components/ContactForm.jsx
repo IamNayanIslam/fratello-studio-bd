@@ -1,11 +1,35 @@
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
+
 const ContactForm = () => {
+  const form = useRef();
+  const [message, setMessage] = useState([]);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_avyoh6h", "template_jt0eflt", form.current, {
+        publicKey: "n1V4QTlU1zE6N-BTN",
+      })
+      .then(
+        () => {
+          toast.success("Message successfully sent");
+          form.current.reset();
+        },
+        (error) => {
+          toast.error("FAILED...", error.text);
+        }
+      );
+  };
   return (
     <div>
       <h2 className="text-3xl font-bold text-center">
         SEND US YOUR THOUGHTS HERE
       </h2>
       <p className="text-xl text-center">We would love to hear from you ❤</p>
-      <form action="" className="mt-10 mb-10">
+      <form ref={form} onSubmit={sendEmail} className="mt-10 mb-10">
         <div className="flex justify-between items-center md:gap-10 gap-2 md:mb-10 mb-4">
           <input
             type="text"
@@ -35,7 +59,8 @@ const ContactForm = () => {
         ></textarea>
         <button
           type="submit"
-          className="bg-black text-white font-bold py-3 px-6 rounded"
+          className="bg-black hover:bg-[#181818] duration-300 text-white font-bold py-3 px-6 rounded"
+          onClick={sendEmail}
         >
           SEND
         </button>
